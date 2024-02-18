@@ -72,5 +72,37 @@ Mientras que la herencia establece una relación `es un/a` (por ejemplo, un Perr
 ## UML (Lenguaje Unificado de Modelado)
 UML es una herramienta estándar para especificar, visualizar, construir y documentar los artefactos de sistemas de software. Facilita la representación gráfica de clases, objetos, y sus relaciones, a través de diversos diagramas, como los diagramas de clases y de secuencia.
 
-### Caso de Estudio: Sistema de Biblioteca
-Imagina un sistema de biblioteca donde Libro es una clase con atributos como titulo y autor, y métodos como prestar() y devolver(). Una clase Usuario podría tener atributos como nombre y id, y métodos para registrar() y buscarLibros(). Utilizando composición, la biblioteca podría incluir objetos de tipo Libro y Usuario, gestionando las interacciones entre ellos.
+### Recursos de UML
+1. Para diagramas relativamente generales: [Draw.io](https://www.draw.io/index.html), es bastante bueno, solo que son diagramas fijos.
+2. Para diagramas "pro": [Mermaid](https://mermaid.js.org/intro/), permite hacer diagramas de casi cualquier tipo y embeberlos en sitios web, como por ejemplo en git. [Editor Mermaid](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R).
+3. Buen material:
+
+### Caso de Estudio: Ajedrez (el cliché)
+Suponga que se debe modelar a través de UML las relaciones entre clases de un juego de ajedrez.
+
+**Relación jugador - juego**
+
+**Relación juego - tablero**
+```mermaid
+classDiagram
+    JuegoAjedrez
+    JuegoAjedrez: +lista piezas
+    JuegoAjedrez: +Tablero Tablero
+    Tablero
+    Tablero: +JuegoAjedrez juego_ajedrez
+    Tablero: +posiciones Posicion
+    Tablero"1" --* "1" JuegoAjedrez 
+    Posicion
+    Posicion: +JuegoAjedrez juego_ajedrez
+    Posicion"64" --* "1" Tablero
+    Pieza
+    Pieza: +JuegoAjedrez juego_ajedrez
+    Pieza"32" --* "1" JuegoAjedrez 
+    Juegador
+    Jugador"2" --> "1" JuegoAjedrez : mueve 
+```
+
+**Relaciones entre piezas**
+
+## Reto 2
+Desarrolle la mayoría de ejercicios en clase. Para cada punto cree un programa individual. Al finalizar suba todo a un repo y súbalo al canal reto_2 en slack.
