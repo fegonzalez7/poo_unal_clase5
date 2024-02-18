@@ -84,7 +84,7 @@ Suponga que se debe modelar a través de UML las relaciones entre clases de un j
 
 **Relación juego - tablero**
 ```mermaid
-classDiagram
+classDiagram;
     JuegoAjedrez
     JuegoAjedrez: +lista piezas
     JuegoAjedrez: +Tablero Tablero
