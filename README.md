@@ -74,13 +74,25 @@ UML es una herramienta estándar para especificar, visualizar, construir y docum
 
 ### Recursos de UML
 1. Para diagramas relativamente generales: [Draw.io](https://www.draw.io/index.html), es bastante bueno, solo que son diagramas fijos.
-2. Para diagramas "pro": [Mermaid](https://mermaid.js.org/intro/), permite hacer diagramas de casi cualquier tipo y embeberlos en sitios web, como por ejemplo en git. [Editor Mermaid](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R).
+2. Para diagramas "pro": [Mermaid](https://mermaid.js.org/intro/), permite hacer diagramas de casi cualquier tipo y embeberlos en sitios web, como por ejemplo en git. [Editor Mermaid](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R). Todas la relaciones de clases [aquí](https://mermaid.js.org/syntax/classDiagram.html#defining-relationship).
 3. Buen material:
 
 ### Caso de Estudio: Ajedrez (el cliché)
 Suponga que se debe modelar a través de UML las relaciones entre clases de un juego de ajedrez.
 
 **Relación jugador - juego**
+```mermaid
+classDiagram
+    direction RL
+    class JuegoAjedrez{
+        +lista piezas
+        +Tablero Tablero
+    }
+    class Jugador{
+        
+    }
+    Jugador"2" --> "1" JuegoAjedrez : mueve()
+```
 
 **Relación juego - tablero**
 ```mermaid
@@ -109,6 +121,47 @@ classDiagram
 ```
 
 **Relaciones entre piezas**
+```mermaid
+classDiagram
+    Pieza <|-- Torre
+    Pieza <|-- Alfil
+    Pieza <|-- Rey
+    Pieza <|-- Caballo
+    Pieza <|-- Peón
+    Pieza <|-- Reina
+    class Pieza{
+      +JuegoAjedrez juego_ajedrez
+      +color
+    }
+    class Torre{
+      +forma
+      +mover(tablero)
+    }
+    class Alfil{
+      +forma
+      +mover(tablero)
+    }
+    class Rey{
+      +forma
+      +mover(tablero)
+    }
+    class Caballo{
+      +forma
+      +mover(tablero)
+    }
+    class Peon{
+      +forma
+      +mover(tablero)
+    }
+    class Reina{
+      +forma
+      +mover(tablero)
+    }
+```
+
+
 
 ## Reto 2
 Desarrolle la mayoría de ejercicios en clase. Para cada punto cree un programa individual. Al finalizar suba todo a un repo y súbalo al canal reto_2 en slack.
+
+1. Elija un problema de la vida real (sistema de gestión de biblioteca, negocio de compra-venta, automóvil, etc) que se pueda modelar a través de objetos y clases. Plantee las relaciones de clases, composiciones, propiedades y comportamientos del sistema en uno mas diagramas tipo UML.
