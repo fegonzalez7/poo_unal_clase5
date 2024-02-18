@@ -85,7 +85,26 @@ Suponga que se debe modelar a través de UML las relaciones entre clases de un j
 **Relación juego - tablero**
 ```mermaid
 classDiagram
-    Animal <|--|> Zebra
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+      +String beakColor
+      +swim()
+      +quack()
+    }
+    class Fish{
+      -int sizeInFeet
+      -canEat()
+    }
+    class Zebra{
+      +bool is_wild
+      +run()
+    }
 ```
 
 **Relaciones entre piezas**
