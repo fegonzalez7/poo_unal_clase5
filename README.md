@@ -85,17 +85,27 @@ Suponga que se debe modelar a través de UML las relaciones entre clases de un j
 **Relación juego - tablero**
 ```mermaid
 classDiagram
-    JuegoAjedrez
-    JuegoAjedrez: +lista piezas
-    JuegoAjedrez: +Tablero Tablero
-    Tablero
-    Tablero: +JuegoAjedrez juego_ajedrez
-    Tablero: +posiciones Posicion
-    Posicion
-    Posicion: +JuegoAjedrez juego_ajedrez
-    Pieza
-    Pieza: +JuegoAjedrez juego_ajedrez
-    Juegador
+    class JuegoAjedrez{
+        +lista piezas
+        +Tablero Tablero
+    }
+    class Tablero{
+        +JuegoAjedrez juego_ajedrez
+        +posiciones Posicion
+    }
+    class Posicion{
+        +JuegoAjedrez juego_ajedrez
+    }
+    class Pieza{
+        +JuegoAjedrez juego_ajedrez
+    }
+    class Jugador{
+        
+    }
+    Tablero"1" --* "1" JuegoAjedrez 
+    Posicion"64" --* "1" Tablero
+    Pieza"32" --* "1" JuegoAjedrez 
+    Jugador"2" --> "1" JuegoAjedrez : mueve
 ```
 
 **Relaciones entre piezas**
