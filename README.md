@@ -23,18 +23,18 @@ Un objeto es una *instancia* de una clase. Posee los atributos definidos por su 
 
 **Ejemplos:**
 - Una instancia de la clase Fruta podría ser una manzana específica, con un color rojo y un sabor dulce.
-- Una instancia de vehículo puede ser un Automóvil, con color rojo, locomoción por motor de combustión, y comportamientos de encender, frenar y apagar.
+- Una instancia de vehículo puede ser un Automóvil, con color magenta, locomoción por motor de combustión, y comportamientos de encender, frenar y apagar.
 
 <br>
  <div align="center">
     <img src="./assets/Objetos.png" alt="Diagrama clases" width="700" height="auto">
 </div>
 
-## Diseño Orientado a Objetos (OOP)
-El **OOP** es una metodología de diseño y programación que se centra en el uso de objetos y clases. Su función principal es modelar datos, tratando de extraer sus atributos y comportamientos. Su enfoque primario es centrarse en objetos que representan conceptos del mundo real 
+## Diseño Orientado a Objetos (OOD)
+El **OOD** es una metodología de diseño y programación que se centra en el uso de objetos y clases. Su función principal es modelar datos, tratando de extraer sus atributos y comportamientos. Su enfoque primario es centrarse en objetos que representan conceptos del mundo real 
 
 ### Abstracción
-La abstracción es un principio fundamental del OOP que implica enfocarse en las características esenciales de un objeto, ignorando las menos importantes o irrelevantes. 
+La abstracción es un principio fundamental del OOD que implica enfocarse en las características esenciales de un objeto, ignorando las menos importantes o irrelevantes. 
 
 ### Abstracción en el Mundo Real
 Los seres humanos abstraen constantemente, simplificando complejidades para entender y interactuar con el mundo. Por ejemplo, al considerar un automóvil, nos enfocamos en su funcionalidad (conducir, frenar, acelerar) más que en los detalles complejos de su funcionamiento interno.
@@ -149,7 +149,7 @@ classDiagram
       +forma
       +mover(tablero)
     }
-    class Peon{
+    class Peón{
       +forma
       +mover(tablero)
     }
