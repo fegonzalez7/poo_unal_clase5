@@ -75,7 +75,7 @@ UML es una herramienta estándar para especificar, visualizar, construir y docum
 ### Recursos de UML
 1. Para diagramas relativamente generales: [Draw.io](https://www.draw.io/index.html), es bastante bueno, solo que son diagramas fijos.
 2. Para diagramas "pro": [Mermaid](https://mermaid.js.org/intro/), permite hacer diagramas de casi cualquier tipo y embeberlos en sitios web, como por ejemplo en git. [Editor Mermaid](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R). Todas la relaciones de clases [aquí](https://mermaid.js.org/syntax/classDiagram.html#defining-relationship).
-3. Buen material:
+
 
 ### Caso de Estudio: Ajedrez (el cliché)
 Suponga que se debe modelar a través de UML las relaciones entre clases de un juego de ajedrez.
@@ -159,7 +159,15 @@ classDiagram
     }
 ```
 
+-------
+### Info adicional
 
+- [Qué es un objeto...estrictamente hablando](https://www.reddit.com/r/computerscience/comments/1an2ssn/strictly_speaking_what_is_an_object_in_programming/?rdt=61253) 
+- [POO para dummies](https://trujillo9616.medium.com/oop-for-dummies-3e6007c8e7f4) 
+- [Definción de objeto -- Ciencias de la computación](https://en.wikipedia.org/wiki/Object_(computer_science)) 
+- [More on UML diagrams](https://medium.com/@ibrahimsengun/uml-diagrams-1ff75deaf3a2) 
+- [Even more UML](https://medium.com/@techsuneel99/understanding-uml-the-unified-modeling-language-bfec589df4f7) 
+-------
 
 ## Reto 2
 Desarrolle la mayoría de ejercicios en clase. Para cada punto cree un programa individual. Al finalizar suba todo a un repo y súbalo al canal reto_2 en slack.
