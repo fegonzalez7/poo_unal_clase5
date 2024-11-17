@@ -127,7 +127,7 @@ classDiagram
     Pieza <|-- Alfil
     Pieza <|-- Rey
     Pieza <|-- Caballo
-    Pieza <|-- Peón
+    Pieza <|-- Peon
     Pieza <|-- Reina
     class Pieza{
       +JuegoAjedrez juego_ajedrez
